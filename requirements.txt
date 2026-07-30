@@ -1,0 +1,7 @@
+streamlit
+google-genai
+pandas
+openpyxl
+requests
+markdown
+json-repair

@@ -1,0 +1,5 @@
+secrets.toml
+.streamlit/
+*temp/
+*Grabación*
+*Grabacion*
