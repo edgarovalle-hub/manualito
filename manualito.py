@@ -36,15 +36,12 @@ def subir_a_google_drive_via_script(nombre_archivo, contenido, es_binario=False,
             contenido_b64 = base64.b64encode(contenido).decode('utf-8')
             payload = {
                 "nombre": nombre_archivo,
-                "fileData": contenido_b64,
-                "mimeType": mime_type,
-                "esBinario": True
+                "excelBase64": contenido_b64  # <-- Cambiado a 'excelBase64' para coincidir con Apps Script
             }
         else:
             payload = {
                 "nombre": nombre_archivo,
-                "html": contenido,
-                "esBinario": False
+                "html": contenido
             }
             
         respuesta = requests.post(URL_APPS_SCRIPT, json=payload, timeout=60)
